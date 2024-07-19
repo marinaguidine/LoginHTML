@@ -1,171 +1,192 @@
-:root {
-    --color-white: white;
-    --radius-default: 15px;
-  
-    --space-default: 15px;
-    --space-large: 18px;
-    --space-largex: 20px;
-  
-    --font-small: 13px;
-    --font-base: 16px;
-    --font-large: 32px;
-  }
-  
-  * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: var(--font-base);
-    background-color: var(--color-white);
-  }
-  
-  /* Input Components */
-  
-  .input {
-    border: transparent;
-    padding: 18px 18px 18px 5px;
-    background: rgba(240, 237, 255, 0.80);
-    width: 100%;
-  }
-  .input:focus {
-    outline: none;
-  }
-  
-  /* End Input Components */
-  
-  .container {
-    height: 100vh;
-  }
-  .container-box {
-    flex: 1;
-    padding: var(--space-largex) 90px;
-  }
-  
-  .container-login-left {
-    flex-direction: column;
-    text-align: center;
-    align-self: center;
-    gap: var(--space-large);
-    width: 100px;
-  }
-  
-  .container-login-left .login-title {
-    font-size: var(--font-large);
-  }
-  
-  .container-login-left .login-description {
-    color: gray;
-    font-size: var(--font-base);
-  }
-  
-  .container-login-left .btn-login {
-    padding: var(--space-largex) 30px;
-    color: white;
-    background: linear-gradient(100deg, purple -5.85%, red 109.55%);
-    box-shadow: 0px 8px 21px 0px rgba(0, 0, 0, 0.16);
-  }
-  .container-login-left .btn-others {
-    border: 1px solid #dcdcdc;
-    padding: var(--space-largex) 40px;
-    border-radius: var(--radius-default);
-    color: black;
-    background-color: var(--color-white);
-  }
-  
-  /* == Container Right == */
-  
-  .container-login-right {
-    background-image: url('bg-right.png');
-    width: 30%;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  .circle {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-80%);
-    width: 470px;
-    height: 574px;
-    border-radius: 56px;
-    border: 1px solid rgba(255, 255, 255, 0.918);
-    background: rgba(255, 255, 255, 0.21);
-    backdrop-filter: blur(6.800000190734863px);
-    padding: 26px;
-  }
-  .rectangle p {
-    color: #FFF;
-    font-size: var(--font-large);
-    font-style: normal;
-    font-weight: 700;
-    line-height: 46px;
-    width: 200px;
-  }
-  
-  .rectangle .img-women {
-    position: absolute;
-    right: -26.5%;
-    top: -0.1%;
-  }
-  
-  .rectangle .img-ellipse {
-    position: absolute;
-    left: -9%;
-    top: 65%;
-  }
-  
-  .rectangle .img-thunderbolt {
-    position: absolute;
-    left: -4.8%;
-    top: 68.5%;
-  }
-  
-  /* == Utils == */
-  
-  .d-flex {
-    display: flex;
-  }
-  .text-uppercase {
-    text-transform: uppercase !important;
-  }
-  .font-weight {
-    font-weight: bold !important;
-  }
-  
-  .radius-default {
-    border-radius: var(--radius-default) !important;
-  }
-  
-  .no-border {
-    border: none;
-  }
-  
-  .position-static {
-   position: static !important;
-  }
-  
-  .btn-block {
-    width: 100%;
-  }
-  
-  .row-flex {
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .row-icon {
-    border: transparent;
-    padding: 12px 0px 12px 20px;
-    background: rgba(240, 237, 255, 0.80);
-    border-top-left-radius: var(--radius-default);
-    border-bottom-left-radius: var(--radius-default);
-    font-size: var(--font-small);
-  }
-  
-  .radius-right {
-    border-top-right-radius: var(--radius-default);
-    border-bottom-right-radius: var(--radius-default);
-  }
+/* Redefine o padding e margem para todos os elementos, 
+garantindo que o box-sizing inclua borda e padding no cálculo do tamanho */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Define o estilo do corpo da página */
+corpo {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  background-color: white;
+}
+
+/* Componentes de entrada */
+
+/* Estilo dos campos de entrada */
+.campo-entrada {
+  border: transparent;
+  padding: 18px 18px 18px 5px;
+  background: rgba(240, 237, 255, 0.80);
+  width: 100%;
+}
+
+/* Estilo quando o campo de entrada está focado */
+.campo-entrada:focus {
+  outline: none;
+}
+
+/* Fim dos Componentes de entrada */
+
+/* Define a altura da página */
+.container {
+  height: 100vh;
+}
+
+/* Estilo da caixa contêiner */
+.caixa-container {
+  flex: 1;
+  padding: 20px 90px;
+}
+
+/* Estilo da parte esquerda do login */
+.container-login-esquerda {
+  flex-direction: column;
+  text-align: center;
+  align-self: center;
+  gap: 18px;
+  width: 100px;
+}
+
+/* Estilo do título do login */
+.container-login-esquerda .titulo-login {
+  font-size: 32px;
+}
+
+/* Estilo da descrição do login */
+.container-login-esquerda .descricao-login {
+  color: gray;
+  font-size: 16px;
+}
+
+/* Estilo do botão de login */
+.container-login-esquerda .botao-login {
+  padding: 20px 30px;
+  color: white;
+  background: linear-gradient(100deg, purple -5.85%, red 109.55%);
+  box-shadow: 0px 8px 21px 0px rgba(0, 0, 0, 0.16);
+}
+
+/* Estilo do botão "rest" */
+.rest {
+  color: black;
+  padding: 8px 25px;
+  color: white;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  background: linear-gradient(100deg, red -5.85%, orange 109.55%);
+  box-shadow: 0px 8px 21px 0px rgba(0, 0, 0, 0.16);
+}
+
+/* Estilo dos outros botões na parte esquerda do login */
+.container-login-esquerda .botao-outros {
+  border: 1px solid #dcdcdc;
+  padding: 20px 40px;
+  border-radius: 15px;
+  color: black;
+  background-color: white;
+}
+
+/* == Container Direito == */
+
+/* Estilo da parte direita do login */
+.container-login-direita {
+  background-image: url('bg-right.png');
+  width: 30%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Estilo do círculo na parte direita */
+.circulo {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-80%);
+  width: 470px;
+  height: 574px;
+  border-radius: 56px;
+  border: 1px solid rgba(255, 255, 255, 0.918);
+  background: rgba(255, 255, 255, 0.21);
+  backdrop-filter: blur(6.8px);
+  padding: 26px;
+}
+
+/* Estilo dos parágrafos dentro da classe retangulo */
+.retangulo p {
+  color: #FFF;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 46px;
+  width: 200px;
+}
+
+/* Estilo da imagem do raio na classe retangulo */
+.retangulo .img-raio {
+  position: absolute;
+  left: -4.8%;
+  top: 68.5%;
+}
+
+/* == Utilitários == */
+
+/* Utilitários de display flex */
+.d-flex {
+  display: flex;
+}
+
+/* Estilo para transformar o texto em maiúsculas */
+.texto-maiusculas {
+  text-transform: uppercase !important;
+}
+
+/* Estilo para definir peso da fonte em negrito */
+.fonte-negrito {
+  font-weight: bold !important;
+}
+
+/* Estilo para definir bordas arredondadas */
+.borda-arredondada {
+  border-radius: 15px !important;
+}
+
+/* Estilo para remover borda */
+.sem-borda {
+  border: none;
+}
+
+/* Estilo para definir a posição como estática */
+.posicao-estatica {
+  position: static !important;
+}
+
+/* Estilo para definir largura total do botão */
+.botao-total {
+  width: 100%;
+}
+
+/* Estilo para alinhar flex itens no centro */
+.linha-flex {
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilo para campos de ícones na linha */
+.linha-icone {
+  border: transparent;
+  padding: 20px -1px 10px 20px;
+  background: rgba(240, 237, 255, 0.80);
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  font-size: var(--font-small);
+}
+
+/* Estilo para definir bordas arredondadas na direita */
+.borda-direita {
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
